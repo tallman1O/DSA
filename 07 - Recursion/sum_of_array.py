@@ -4,7 +4,11 @@ def sum_of_array(arr):
     if n == 0:
         return 0
 
-    return arr[n - 1] + sum_of_array(arr[:n - 1])
+    sumOfRemainingArray = sum_of_array(arr[1:])
+
+    ans = arr[0] + sumOfRemainingArray
+
+    return ans
 
 
 print(sum_of_array([2,3,4]))
